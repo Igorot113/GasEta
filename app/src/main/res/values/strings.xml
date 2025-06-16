@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GasEta</string>
+    <string name="Titulo">GasEta</string>
+    <string name="GasolinaPreco">Preço da Gasolina</string>
+    <string name="EtanolPreco">Preço do Etanol</string>
+    <string name="EscreverGas">Gasolina</string>
+    <string name="EscreverEta">Etanol</string>
+    <string name="Botao">Comparar preços</string>
+    <string name="TextoResultadoGas"></string>
+    <string name="TextoResultadoEta"></string>
+</resources>
