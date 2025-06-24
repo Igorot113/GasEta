@@ -6,6 +6,9 @@
     <string name="EscreverGas">Gasolina</string>
     <string name="EscreverEta">Etanol</string>
     <string name="Botao">Comparar preços</string>
+    <string name="BtnLimpar">Limpar</string>
+    <string name="BtnSalvar">Salvar</string>
+    <string name="Tela_Splash">GasEta</string>
     <string name="TextoResultadoGas"></string>
-    <string name="TextoResultadoEta"></string>
+    <string name="BtnFinalizar">Finalizar</string>
 </resources>

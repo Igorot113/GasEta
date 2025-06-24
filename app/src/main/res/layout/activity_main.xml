@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -38,14 +38,15 @@
                 android:text="@string/GasolinaPreco" />
 
             <EditText
-                android:id="@+id/editTextText3"
+                android:id="@+id/editTextGas"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="@string/EscreverGas" />
+                android:hint="@string/EscreverGas"
+                android:background="@android:drawable/editbox_background"/>
         </LinearLayout>
 
         <LinearLayout
@@ -62,14 +63,15 @@
                 android:text="@string/EtanolPreco" />
 
             <EditText
-                android:id="@+id/editTextText4"
+                android:id="@+id/editTextEtanol"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="text"
-                android:hint="@string/EscreverEta" />
+                android:hint="@string/EscreverEta"
+                android:background="@android:drawable/editbox_background"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -79,30 +81,54 @@
         android:layout_height="wrap_content"
         android:text="@string/Botao"
         android:backgroundTint="#25EB53"
+        android:layout_weight="1"
         android:textColor="@color/black"
         android:layout_marginTop="30dp"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="0dp">
 
-
-        <TextView
-            android:id="@+id/textView5"
+        <Button
+            android:id="@+id/button3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="30dp"
-            android:textSize="30dp"
-            android:text="@string/TextoResultadoGas" />
+            android:layout_height="match_parent"
+            android:text="@string/BtnSalvar"
+            android:backgroundTint="#25EB53"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"/>
 
-        <TextView
-            android:id="@+id/textView6"
+        <Button
+            android:id="@+id/button4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="30dp"
-            android:text="@string/TextoResultadoEta" />
+            android:layout_height="match_parent"
+            android:text="@string/BtnLimpar"
+            android:backgroundTint="#25EB53"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/BtnFinalizar"
+            android:backgroundTint="#25EB53"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"/>
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        android:text="@string/TextoResultadoGas" />
 
 </LinearLayout>
