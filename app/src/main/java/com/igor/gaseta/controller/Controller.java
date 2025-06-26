@@ -17,11 +17,12 @@ public class Controller {
     public String CalcularPrecos(Combustivel combustivel){
         double gas = combustivel.getGasolina();
         double eta = combustivel.getEtanol();
-        if(gas/eta <= 0.70){
-            combustivel.setComparacao("Gasolina Compensa");
+        double divisao = eta/gas;
+        if(divisao <= 0.70){
+            combustivel.setComparacao("Etanol Compensa");
         }
         else{
-            combustivel.setComparacao("Etanol Compensa");
+            combustivel.setComparacao("Gasolina Compensa");
         }
         return combustivel.getComparacao();
     }
