@@ -12,6 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.igor.gaseta.CombustivelDAO.CombustivelDAO;
 import com.igor.gaseta.R;
 import com.igor.gaseta.controller.Controller;
 import com.igor.gaseta.model.Combustivel;
@@ -38,9 +39,7 @@ public class MainActivity extends AppCompatActivity {
         });
         controller = new Controller(this);
         combustivel = new Combustivel();
-
         controller.Buscar(combustivel);
-
         Gasolina = findViewById(R.id.editTextGas);
         Etanol = findViewById(R.id.editTextEtanol);
         btnComparar = findViewById(R.id.button2);
@@ -48,11 +47,9 @@ public class MainActivity extends AppCompatActivity {
         btnLimpar = findViewById(R.id.button4);
         btnFinalizar = findViewById(R.id.button5);
         Result = findViewById(R.id.textResult);
-
         Gasolina.setText(combustivel.getTextoGas());
         Etanol.setText(combustivel.getTextoEta());
         Result.setText(combustivel.getComparacao());
-
         btnComparar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,17 +71,16 @@ public class MainActivity extends AppCompatActivity {
                 controller.Limpar();
             }
         });
-
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 controller.Salvar(combustivel);
             }
         });
-
         btnFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                controller.Finalizar();
                 finish();
             }
         });
